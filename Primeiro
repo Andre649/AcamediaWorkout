@@ -1,0 +1,9 @@
+from typing import Annotated
+from pydantic import BaseModel, Field
+
+class Atleta(BaseModel):
+    nome: Annotated[str, Field(description="Nome do atleta", example="João", max_length=50)]
+    cpf: Annotated[str, Field(description="CPF do atleta", example="12345678901", max_length=11)]
+    idade: Annotated[str, Field(description="idade do atleta", example="75.5)]
+    sexo: Annotated[str, Field(description="sexo" , example="M", maxlength=M)]                            
+                                
